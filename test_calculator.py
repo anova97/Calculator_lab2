@@ -3,6 +3,7 @@
 from calculator import Calculator
 
 class TestCalculator():
+    """Calculator tests"""
     def test_sum(self):
         """Test the sum of the operands"""
         calc = Calculator(op1=1, op2=2)
