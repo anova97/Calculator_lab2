@@ -24,7 +24,7 @@ class Calculator:
             return "Cannot divide by zero."
         return self.op1 / self.op2
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     calc = Calculator(10, 2)
 
     print("Sum:", calc.sum())
