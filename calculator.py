@@ -34,3 +34,4 @@ if __name__ == "__main__":
 
     calc_zero = Calculator(10, 0)
     print("Division by zero:", calc_zero.divide())
+
