@@ -27,4 +27,4 @@ class TestCalculator():
     def test_divide_zero(self):
         """Test the division by 0"""
         calc = Calculator(op1=4, op2=0)
-        assert calc.divide() == "Cannot divide by zero"
+        assert calc.divide() == "Cannot divide by zero."
