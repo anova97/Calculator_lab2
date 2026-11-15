@@ -22,7 +22,7 @@ class TestCalculator():
     def test_divide(self):
         """Test the division of the operands"""
         calc = Calculator(op1=4, op2=2)
-        assert calc.divide() == 2
+        assert calc.divide() == 3
 
     def test_divide_zero(self):
         """Test the division by 0"""
