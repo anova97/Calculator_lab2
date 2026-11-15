@@ -1,5 +1,7 @@
 """Calculator testing module"""
 
+import pytest
+
 from calculator import Calculator
 
 class TestCalculator():
@@ -22,9 +24,19 @@ class TestCalculator():
     def test_divide(self):
         """Test the division of the operands"""
         calc = Calculator(op1=4, op2=2)
-        assert calc.divide() == 3
+        assert calc.divide() == 2
 
     def test_divide_zero(self):
         """Test the division by 0"""
         calc = Calculator(op1=4, op2=0)
         assert calc.divide() == "Cannot divide by zero."
+
+    @pytest.mark.parametrize("a, b, expected", [
+        (2, 3, 5),
+        (-1, -2, -3),
+        (2.5, 3.5, 6.0),
+    ])
+    def test_add_parametrized(self, a, b, expected):
+        """Parametrized tests"""
+        calc = Calculator(a, b)
+        assert calc.sum() == expected
